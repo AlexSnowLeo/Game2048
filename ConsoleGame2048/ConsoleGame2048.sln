@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2048
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleGame2048", "ConsoleGame2048\ConsoleGame2048.csproj", "{EB0F5F2A-0D88-457C-AA21-D57D027BFBE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game2048", "Game2048\Game2048.csproj", "{E8E501F8-1C07-4322-A616-6FBAC3BBBD70}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB0F5F2A-0D88-457C-AA21-D57D027BFBE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB0F5F2A-0D88-457C-AA21-D57D027BFBE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB0F5F2A-0D88-457C-AA21-D57D027BFBE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB0F5F2A-0D88-457C-AA21-D57D027BFBE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8E501F8-1C07-4322-A616-6FBAC3BBBD70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8E501F8-1C07-4322-A616-6FBAC3BBBD70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8E501F8-1C07-4322-A616-6FBAC3BBBD70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8E501F8-1C07-4322-A616-6FBAC3BBBD70}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4886F5E8-0403-4982-A902-BBF092EB5D56}
+	EndGlobalSection
+EndGlobal
