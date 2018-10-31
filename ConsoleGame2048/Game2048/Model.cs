@@ -112,8 +112,11 @@ namespace Game2048
         {
             moved = false;
             for (int x = 0; x < map.size; x++)
-                for (int y = map.size - 2; y >= 0; y--)
-                    Move(x, y, 0, +1);
+            {
+                for (int y = map.size - 2; y >= 0; y--) Move(x, y, 0, +1);
+                for (int y = map.size - 2; y >= 0; y--) Join(x, y, 0, +1);
+            }
+
             if (moved) AddRandomNumber();
         }
 

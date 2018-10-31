@@ -42,7 +42,7 @@ namespace ConsoleGame2048
                 {
                     Console.SetCursorPosition(x * 5 + 5, y * 2 + 2);
                     int number = model.GetMap(x, y);
-                    Console.Write(number == 0 ? "[   ]" : "[ " + number.ToString() + " ]");
+                    Console.Write(number == 0 ? ".   " : number + "    ");
                 }
             Console.WriteLine();
             if (model.IsGameOver())
