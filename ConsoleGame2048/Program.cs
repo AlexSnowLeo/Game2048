@@ -48,7 +48,7 @@ namespace ConsoleGame2048
             if (model.IsGameOver())
                 Console.WriteLine("GAME OVER!");
             else
-                Console.WriteLine("Stiil play");
+                Console.WriteLine("Still play");
         }
     }
 }
