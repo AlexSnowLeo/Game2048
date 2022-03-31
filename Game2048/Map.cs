@@ -1,23 +1,21 @@
-﻿using System;
-
-namespace Game2048
+﻿namespace Game2048
 {
-    class Map
+    internal class Map
     {
-        public int size { get; private set; }
-        int[,] map;
+        public int Size { get; }
+        private readonly int[,] _map;
 
         public Map(int size)
         {
-            this.size = size;
-            map = new int[size, size];
+            Size = size;
+            _map = new int[size, size];
         }
 
         public int Get(int x, int y)
         {
             if (OnMap(x, y))
             {
-                return map[x, y];
+                return _map[x, y];
             }
             return -1;
         }
@@ -26,14 +24,14 @@ namespace Game2048
         {
             if (OnMap(x, y))
             {
-                map[x, y] = number;
+                _map[x, y] = number;
             }
         }
 
-        public bool OnMap(int x, int y)
+        private bool OnMap(int x, int y)
         {
-            return x >= 0 && x < size && 
-                   y >= 0 && y < size;
+            return x >= 0 && x < Size && 
+                   y >= 0 && y < Size;
         }
     }
 }

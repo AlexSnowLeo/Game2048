@@ -1,54 +1,49 @@
 ﻿using Game2048;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace ConsoleGame2048
 {
     class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Program program = new Program();
+            var program = new Program();
             program.Start();
         }
 
-        Model model;
+        private Model _model;
 
-        void Start()
+        private void Start()
         {
-            Model model = new Model(4);
-            model.Start();
+            _model = new Model(4);
+            _model.Start();
             while (true)
             {
-                Show(model);
+                Show(_model);
                 switch (Console.ReadKey(false).Key)
                 {
-                    case ConsoleKey.LeftArrow:  model.Left(); break;
-                    case ConsoleKey.RightArrow: model.Right(); break;
-                    case ConsoleKey.UpArrow:    model.Up(); break;
-                    case ConsoleKey.DownArrow:  model.Down(); break;
-                    case ConsoleKey.Spacebar:   model.Start(); break;
+                    case ConsoleKey.LeftArrow:  _model.Left(); break;
+                    case ConsoleKey.RightArrow: _model.Right(); break;
+                    case ConsoleKey.UpArrow:    _model.Up(); break;
+                    case ConsoleKey.DownArrow:  _model.Down(); break;
+                    case ConsoleKey.Spacebar:   _model.Start(); break;
                     case ConsoleKey.Escape:     return;
+                    default:                    continue;
                 }
             }
         }
 
-        void Show(Model model)
+        private static void Show(Model model)
         {
-            for (int y = 0; y < model.size; y++)
-                for (int x = 0; x < model.size; x++)
+            for (var y = 0; y < model.Size; y++)
+                for (var x = 0; x < model.Size; x++)
                 {
                     Console.SetCursorPosition(x * 5 + 5, y * 2 + 2);
-                    int number = model.GetMap(x, y);
+                    var number = model.GetMap(x, y);
                     Console.Write(number == 0 ? ".   " : number + "    ");
                 }
             Console.WriteLine();
-            if (model.IsGameOver())
-                Console.WriteLine("GAME OVER!");
-            else
-                Console.WriteLine("Still play");
+            Console.WriteLine(model.IsGameOver() ? "GAME OVER!" : "Still play");
         }
     }
 }
